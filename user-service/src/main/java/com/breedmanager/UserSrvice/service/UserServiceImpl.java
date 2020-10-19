@@ -1,0 +1,48 @@
+package com.breedmanager.UserSrvice.service;
+
+import com.breedmanager.UserSrvice.model.UserModel;
+import com.breedmanager.UserSrvice.model.UserDTO;
+import com.breedmanager.UserSrvice.repository.UserRepository;
+import org.springframework.stereotype.Service;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+    private final UserRepository userRepository;
+
+
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @Override
+    public UserDTO createUser(UserDTO userDTO) {
+
+        return userDTO;
+    }
+
+    @Override
+    public void editProfile(UserDTO userDTO) {
+
+    }
+
+    @Override
+    public void removeUser(Long id) {
+
+    }
+
+    @Override
+    public UserModel getUserById(Long id) {
+        return null;
+    }
+
+    @Override
+    public boolean checkIfUserAlreadyExist(UserDTO user) {
+        return false;
+    }
+
+    @Override
+    public boolean checkIfEmailIsAlreadyUsed(String currentEmail, UserDTO userDTO) {
+        return false;
+    }
+}
