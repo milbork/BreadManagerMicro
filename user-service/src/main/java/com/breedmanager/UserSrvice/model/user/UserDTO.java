@@ -1,4 +1,4 @@
-package com.breedmanager.UserSrvice.model;
+package com.breedmanager.UserSrvice.model.user;
 
 public class UserDTO {
 

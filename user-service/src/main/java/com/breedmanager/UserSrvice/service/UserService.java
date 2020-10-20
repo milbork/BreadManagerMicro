@@ -1,7 +1,7 @@
 package com.breedmanager.UserSrvice.service;
 
-import com.breedmanager.UserSrvice.model.UserModel;
-import com.breedmanager.UserSrvice.model.UserDTO;
+import com.breedmanager.UserSrvice.model.user.User;
+import com.breedmanager.UserSrvice.model.user.UserDTO;
 
 
 public interface UserService {
@@ -11,7 +11,7 @@ public interface UserService {
 
     void removeUser(Long id);
 
-    UserModel getUserById(Long id);
+    User getUserById(Long id);
 
     boolean checkIfUserAlreadyExist(UserDTO user);
 

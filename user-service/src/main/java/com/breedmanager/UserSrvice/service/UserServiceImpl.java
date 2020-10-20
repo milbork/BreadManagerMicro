@@ -1,7 +1,7 @@
 package com.breedmanager.UserSrvice.service;
 
-import com.breedmanager.UserSrvice.model.UserModel;
-import com.breedmanager.UserSrvice.model.UserDTO;
+import com.breedmanager.UserSrvice.model.user.User;
+import com.breedmanager.UserSrvice.model.user.UserDTO;
 import com.breedmanager.UserSrvice.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserModel getUserById(Long id) {
+    public User getUserById(Long id) {
         return null;
     }
 

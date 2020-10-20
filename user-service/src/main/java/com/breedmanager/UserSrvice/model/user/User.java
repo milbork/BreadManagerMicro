@@ -1,12 +1,13 @@
-package com.breedmanager.UserSrvice.model;
+package com.breedmanager.UserSrvice.model.user;
 
+import com.breedmanager.UserSrvice.model.role.UserRole;
 import org.springframework.hateoas.RepresentationModel;
 
 import javax.persistence.*;
 
 @Entity
-
-public class UserModel extends RepresentationModel {
+@Table(name = "users")
+public class User extends RepresentationModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,10 +19,15 @@ public class UserModel extends RepresentationModel {
     private int enabled;
     private String email;
 
-    public UserModel() {
+
+    @ManyToOne
+    @JoinColumn (name = "role_id")
+    private UserRole role;
+
+    public User() {
     }
 
-    public UserModel(Long id, String userFunction, String firstName, String lastName, String password, int enabled, String email) {
+    public User(Long id, String userFunction, String firstName, String lastName, String password, int enabled, String email) {
         this.id = id;
         this.userFunction = userFunction;
         this.firstName = firstName;

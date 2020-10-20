@@ -1,6 +1,6 @@
 package com.breedmanager.UserSrvice.controller;
 
-import com.breedmanager.UserSrvice.model.UserDTO;
+import com.breedmanager.UserSrvice.model.user.UserDTO;
 import com.breedmanager.UserSrvice.service.UserService;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.Link;
